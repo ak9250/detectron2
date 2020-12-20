@@ -1,0 +1,8 @@
+python: 3.6
+cuda: 9.2
+entrypoint: python runway_model.py
+spec:
+  gpu: True
+  cpu: False
+build_steps:
+  - sh ./install.sh
