@@ -11,3 +11,4 @@ build_steps:
   - apt-get install ffmpeg libsm6 libxext6  -y
   - pip install runway-python torch torchvision opencv-python
   - pip install --ignore-installed detectron2 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu101/torch1.7/index.html
+  - rm -rf detectron2
