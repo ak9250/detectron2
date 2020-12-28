@@ -5,4 +5,5 @@ spec:
   gpu: True
   cpu: False
 build_steps:
-  - sh ./install.sh
+  - pip install pyyaml==5.1 runway-python
+  - pip install detectron2 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu101/torch1.7/index.html
