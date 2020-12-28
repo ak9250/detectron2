@@ -1,5 +1,5 @@
 python: 3.6
-cuda: 10.2
+cuda: 9.2
 entrypoint: python runway_model.py
 spec:
   gpu: True
@@ -10,6 +10,5 @@ build_steps:
   - apt-get install -y cmake
   - apt-get install ffmpeg libsm6 libxext6  -y
   - pip install runway-python opencv-python
-  - pip install --ignore-installed detectron2 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu101/torch1.7/index.html
-  - pip install torch==1.6.0 torchvision==0.7.0
+  - pip install --ignore-installed detectron2 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu102/torch1.7/index.html
   - rm -rf detectron2
