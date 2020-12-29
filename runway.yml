@@ -8,11 +8,8 @@ build_steps:
   - apt-get update
   - apt-get install -y libboost-all-dev
   - apt-get install -y cmake
-  - apt-get install ffmpeg libsm6 libxext6  -y
-  - pip install runway-python opencv-python torch torchvision
-  - pip install --ignore-installed 'git+https://github.com/facebookresearch/fvcore'
-  # - pip install --ignore-installed -e detectron2
-  # - pip install --ignore-installed detectron2 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu102/torch1.7/index.html
-  - pip install 'git+https://github.com/ak9250/detectron2.git'
-
-  # - rm -rf detectron2
+  - apt-get install ffmpeg libsm6 libxext6 gcc -y
+  - pip install --ignore-installed runway-python opencv-python torch torchvision pyyaml==5.1
+  - python -m pip install -e detectron2
+  - pip install av
+  - cd ./detectron2/projects/DensePose
