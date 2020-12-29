@@ -10,6 +10,6 @@ build_steps:
   - apt-get install -y cmake
   - apt-get install ffmpeg libsm6 libxext6 gcc -y
   - pip install --ignore-installed runway-python opencv-python torch torchvision pyyaml==5.1
-  - python -m pip install -e detectron2
+  - python -m pip install detectron2
   - pip install av
   - cd ./detectron2/projects/DensePose
