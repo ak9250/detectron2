@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-
+import runway
 from typing import ClassVar, Dict
 
 from detectron2.config import get_cfg
@@ -64,9 +64,6 @@ def predict(img):
     data = extractor(outputs)
     image_vis = visualizer.visualize(image, data)
     return image_vis
-    
-
-# cv2_imshow(predict(im[:, :, ::-1]))
 
   
 @runway.command('visualize', inputs={'input': runway.image}, outputs={'output': runway.image})
