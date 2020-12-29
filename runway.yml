@@ -8,8 +8,8 @@ build_steps:
   - apt-get update
   - apt-get install -y libboost-all-dev
   - apt-get install -y cmake
-  - apt-get install ffmpeg libsm6 libxext6 gcc -y
+  - apt-get install ffmpeg libsm6 libxext6 -y
   - pip install --ignore-installed runway-python opencv-python torch torchvision pyyaml==5.1
-  - python -m pip install -e .
+  - python -m pip install --ignore-installed detectron2 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu102/torch1.7/index.html
   - pip install av
   - cd projects/DensePose
