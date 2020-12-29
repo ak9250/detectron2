@@ -5,10 +5,11 @@ spec:
   gpu: True
   cpu: False
 build_steps:
+  - add-apt-repository ppa:ubuntu-toolchain-r/test
   - apt-get update
   - apt-get install -y libboost-all-dev
   - apt-get install ffmpeg libsm6 libxext6 -y
-  - apt -y install gcc-8 g++-8
+  - apt-get install gcc-8 g++-8
   - update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 8
   - update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-8 8
   - pip install --ignore-installed runway-python opencv-python torch torchvision pyyaml==5.1 cmake
