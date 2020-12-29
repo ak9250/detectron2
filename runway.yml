@@ -12,4 +12,4 @@ build_steps:
   - pip install --ignore-installed runway-python opencv-python torch torchvision pyyaml==5.1
   - python -m pip install -e .
   - pip install av
-  - cd ./detectron2/projects/DensePose
+  - cd projects/DensePose
