@@ -15,6 +15,7 @@ build_steps:
   # - update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-8 8
   - pip install --ignore-installed runway-python opencv-python pyyaml==5.1 cmake
   # - python -m pip install --ignore-installed detectron2 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu102/torch1.7/index.html
+  - which nvcc
   - python -m pip install --ignore-installed -e .
   - pip install av
   # - mv /model/detectron2 /model/detectron22
