@@ -13,6 +13,6 @@ build_steps:
   - pip install --ignore-installed 'git+https://github.com/facebookresearch/fvcore'
   # - pip install --ignore-installed -e detectron2
   # - pip install --ignore-installed detectron2 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu102/torch1.7/index.html
-  - python -m pip install 'git+https://github.com/ak9250/detectron2.git'
+  - pip install 'git+https://github.com/ak9250/detectron2.git'
 
   # - rm -rf detectron2
