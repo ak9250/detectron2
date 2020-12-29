@@ -12,4 +12,5 @@ build_steps:
   - pip install --ignore-installed runway-python opencv-python torch torchvision pyyaml==5.1
   - python -m pip install --ignore-installed detectron2 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu102/torch1.7/index.html
   - pip install av
-  - cd projects/DensePose
+  - mv /model/detectron2 /model/detectron22
+  - cd /model/detectron22/projects/DensePose
