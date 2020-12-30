@@ -1,24 +1,15 @@
 python: 3.6
 cuda: 10.2
-cuda_flavor: devel
 entrypoint: python runway_model.py
 spec:
   gpu: True
   cpu: False
 build_steps:
-  # - add-apt-repository ppa:ubuntu-toolchain-r/test
   - apt-get update
   - apt-get install -y libboost-all-dev
-  - apt-get install ffmpeg libsm6 libxext6 -y
-  # - pip install torch==1.7.1+cu92 torchvision==0.8.2+cu92 torchaudio==0.7.2 -f https://download.pytorch.org/whl/torch_stable.html
-  - pip install torch torchvision
-  # - apt-get install -y gcc-8 g++-8
-  # - update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 8
-  # - update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-8 8
-  - pip install --ignore-installed runway-python opencv-python pyyaml==5.1 cmake
-  # - python -m pip install --ignore-installed detectron2 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu102/torch1.7/index.html
-  - python -m pip install --ignore-installed -e .
-  - pip install av
-  # - mv /model/detectron2 /model/detectron22
-  - cd detectron2/projects/DensePose
-  - pwd
+  - apt-get install -y cmake
+  - apt-get install ffmpeg libsm6 libxext6  -y
+  - pip install runway-python opencv-python torch torchvision
+  - pip install --ignore-installed detectron2 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu102/torch1.7/index.html
+  - python developset.py
+  - rm -rf detectron2
