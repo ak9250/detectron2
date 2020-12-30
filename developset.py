@@ -16,3 +16,11 @@ cfg.merge_from_file(model_zoo.get_config_file("COCO-InstanceSegmentation/mask_rc
 cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.5  
 cfg.MODEL.WEIGHTS = model_zoo.get_checkpoint_url("COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml")
 predictor = DefaultPredictor(cfg)
+
+
+# Inference with a keypoint detection model
+cfgkey = get_cfg()   # get a fresh new config
+cfgkey.merge_from_file(model_zoo.get_config_file("COCO-Keypoints/keypoint_rcnn_R_50_FPN_3x.yaml"))
+cfgkey.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.7  # set threshold for this model
+cfgkey.MODEL.WEIGHTS = model_zoo.get_checkpoint_url("COCO-Keypoints/keypoint_rcnn_R_50_FPN_3x.yaml")
+predictorkey = DefaultPredictor(cfgkey)

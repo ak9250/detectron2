@@ -1,8 +1,6 @@
 # DensePose in Detectron2
 **Dense Human Pose Estimation In The Wild**
 
-[![Open in RunwayML Badge](https://open-app.runwayml.com/gh-badge.svg)](https://open-app.runwayml.com/?model=akhaliq/detectron2)
-
 _Rıza Alp Güler, Natalia Neverova, Iasonas Kokkinos_
 
 [[`densepose.org`](https://densepose.org)] [[`arXiv`](https://arxiv.org/abs/1802.00434)] [[`BibTeX`](#CitingDensePose)]
