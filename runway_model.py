@@ -11,7 +11,7 @@ import os, json, cv2, random
 def visualize(model, inputs):
   im = np.array(inputs['input'])
   
-  outputs = developeset.predictor(im)
+  outputs = developset.predictor(im)
   v = Visualizer(im[:, :, ::-1], MetadataCatalog.get(developset.cfg.DATASETS.TRAIN[0]), scale=1.2)
   out = v.draw_instance_predictions(outputs["instances"].to("cpu"))
   return out.get_image()[:, :, ::-1]
