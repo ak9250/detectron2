@@ -21,3 +21,4 @@ build_steps:
   - pip install av
   # - mv /model/detectron2 /model/detectron22
   - cd projects/DensePose
+  - pwd
