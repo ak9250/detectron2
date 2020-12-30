@@ -20,5 +20,5 @@ build_steps:
   - python -m pip install --ignore-installed -e .
   - pip install av
   # - mv /model/detectron2 /model/detectron22
-  - cd /model/detectron2/projects/DensePose
+  - cd detectron2/projects/DensePose
   - pwd
