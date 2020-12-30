@@ -24,3 +24,9 @@ cfgkey.merge_from_file(model_zoo.get_config_file("COCO-Keypoints/keypoint_rcnn_R
 cfgkey.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.7  # set threshold for this model
 cfgkey.MODEL.WEIGHTS = model_zoo.get_checkpoint_url("COCO-Keypoints/keypoint_rcnn_R_50_FPN_3x.yaml")
 predictorkey = DefaultPredictor(cfgkey)
+
+# Inference with a panoptic segmentation model
+cfgpan = get_cfg()
+cfgpan.merge_from_file(model_zoo.get_config_file("COCO-PanopticSegmentation/panoptic_fpn_R_101_3x.yaml"))
+cfgpan.MODEL.WEIGHTS = model_zoo.get_checkpoint_url("COCO-PanopticSegmentation/panoptic_fpn_R_101_3x.yaml")
+predictorpan = DefaultPredictor(cfgpan)
