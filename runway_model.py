@@ -18,7 +18,7 @@ def predict(img):
   
 @runway.command('Densepose', inputs={'input5': runway.image}, outputs={'output5': runway.image})
 def visualize(model, inputs):
-  os.chdir('/model/projects/DensePose/')
+  os.chdir('projects/DensePose/')
   from typing import ClassVar, Dict
 
   from detectron2.config import get_cfg
